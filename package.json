@@ -4,9 +4,8 @@
   "description": "",
   "main": "build/server.js",
   "scripts": {
-    "build": "tsc",
-    "prestart": "npm run build",
-    "start": "node server.js",
+    "prestart": "npm install --only=dev && npm install && tsc",
+    "start": "node .",
     "lint": "eslint src/**/*.ts",
     "format": "eslint src/**/*.ts --fix",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
