@@ -12,6 +12,18 @@
     "format": "eslint src/**/*.ts --fix"
   },
   "proxy": "http://localhost:8000",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@mui/material": "^5.0.1",
     "@reach/router": "^1.3.4",

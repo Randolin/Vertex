@@ -9,7 +9,7 @@
     "dev": "npm run client-build && npm start",
     "prestart": "npm install && tsc",
     "start": "node .",
-    "client-build": "cd client && npm install --only=dev && npm install && npm run build",
+    "client-build": "cd client && npm install && npm run build",
     "lint": "eslint src/**/*.ts",
     "format": "eslint src/**/*.ts --fix",
     "heroku-postbuild": "npm run client-build"
