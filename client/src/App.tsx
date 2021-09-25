@@ -1,25 +1,30 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import "./App.css";
+import React, { ReactElement, useEffect } from 'react'
+import { Router } from '@reach/router'
+import { initializeData } from './utils/data'
 
-const App = () => {
-  const [users, setUsers] = useState([]);
-  const getData = async () => {
-    const res = await axios.get("/api/members");
-    setUsers(res.data);
-  };
+import AboutPage from './pages/about/AboutPage'
+import ContactPage from './pages/contact/ContactPage'
+import HomePage from './pages/home/HomePage'
+import NotFoundPage from './pages/notfound/NotFoundPage'
+import PrivacyPage from './pages/privacy/PrivacyPage'
 
+const App: React.FC = (): ReactElement => {
   useEffect(() => {
-    getData();
-  }, []);
+    console.log('App | Initialized')
+    initializeData()
+  }, [])
 
   return (
-    <div>
-      {users.map((u: any) => (
-        <h4 key={u._id}>username: {u.username}</h4>
-      ))}
-    </div>
-  );
-};
+    <>
+      <Router>
+        <NotFoundPage default />
+        <HomePage path="/" />
+        <AboutPage path="about" />
+        <ContactPage path="contact" />
+        <PrivacyPage path="privacy" />
+      </Router>
+    </>
+  )
+}
 
-export default App;
+export default App
