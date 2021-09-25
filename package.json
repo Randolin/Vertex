@@ -1,7 +1,9 @@
 {
-  "name": "moxy",
-  "version": "0.0.0",
-  "description": "",
+  "name": "moxy-backend",
+  "author": "Aaron Holloway",
+  "version": "0.0.1",
+  "license": "ISC",
+  "description": "Moxy Backend Express Server",
   "main": "build/server.js",
   "scripts": {
     "dev": "npm run client-build && npm start",
@@ -15,9 +17,6 @@
   "engines": {
     "node": "16.10.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@types/express": "^4.17.13",
     "@types/mongoose": "^5.11.97",
