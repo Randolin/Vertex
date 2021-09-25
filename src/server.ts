@@ -11,13 +11,13 @@ dotenv.config();
 const app = express();
 
 app.use('/api', router);
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
 const secret = process.env.SECRET || 'ugly space wizard donkey';
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../', 'client/', 'build/', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
 });
 
 app.listen(port, () => {
