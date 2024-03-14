@@ -1,9 +1,9 @@
 {
-  "name": "moxy-backend",
+  "name": "vertex-backend",
   "author": "Aaron Holloway",
   "version": "0.0.1",
   "license": "ISC",
-  "description": "Moxy Backend Express Server",
+  "description": "Vertex Backend Express Server",
   "main": "build/server.js",
   "scripts": {
     "dev": "npm run client-build && npm start",
