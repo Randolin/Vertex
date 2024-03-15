@@ -40,5 +40,3 @@ logs/
 
 # Miscellaneous
 .DS_Store
-.env
-.env.*
