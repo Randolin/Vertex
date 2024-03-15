@@ -4,14 +4,13 @@
   "description": "Vertex",
   "main": "index.js",
   "engines": {
-    "node": "^20.11.1",
-    "npm": "^10.5.0"
+    "node": "^20.11.1"
   },
   "scripts": {
     "build": "npm run build-frontend && npm run build-backend",
     "build-backend": "cd backend && npm i && npm run build",
     "build-frontend": "cd frontend && npm i && npm run build",
-    "heroku-prebuild": "npm i -g npm && npm i -g node-gyp && npm i -g angular-cli",
+    "heroku-prebuild": "npm i -g angular-cli",
     "heroku-postbuild": "npm run build",
     "start": "npm run start-backend",
     "start-backend": "cd backend && npm start",
