@@ -11,7 +11,6 @@
     "build": "npm run build-frontend && npm run build-backend",
     "build-backend": "cd backend && npm i && npm run build",
     "build-frontend": "cd frontend && npm i && npm run build",
-    "heroku-prebuild": "npm i -g node-sass@latest && npm i -g angular-cli@latest",
     "heroku-postbuild": "npm run build",
     "start": "npm run start-backend",
     "start-backend": "cd backend && npm start",
@@ -20,7 +19,11 @@
   "author": "Aaron Holloway",
   "license": "MIT",
   "devDependencies": {
+    "@angular-devkit/build-angular": "^17.3.0",
+    "@angular/cli": "^17.3.0",
+    "@angular/compiler-cli": "^17.3.0",
     "eslint": "^8.57.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "typescript": "~5.4.2"
   }
 }
