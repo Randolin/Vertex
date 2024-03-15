@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "description": "Vertex",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build-backend": "cd backend && npm run build",
+    "build-frontend": "cd frontend && npm run build",
+    "start-backend": "cd backend && npm start",
+    "start-frontend": "cd frontend && npm start"
+  },
   "author": "Aaron Holloway",
   "license": "MIT",
   "devDependencies": {

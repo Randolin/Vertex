@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "type": "module",
   "compilerOptions": {
-    "outDir": "./dist/app",
+    "outDir": "./dist",
     "types": []
   },
   "include": [

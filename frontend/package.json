@@ -2,7 +2,7 @@
   "name": "vertex-frontend",
   "version": "0.0.1",
   "scripts": {
-    "build": "ng build --base-href vertex",
+    "build": "ng build --ts-config ./tsconfig.app.json",
     "format": "eslint src/**/*.ts --fix",
     "lint": "eslint src/**/*.ts",
     "start": "ng serve",
