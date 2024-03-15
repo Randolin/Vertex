@@ -3,7 +3,8 @@
   "compilerOptions": {
     "outDir": "./dist",
     "types": ["node"],
-    "module": "commonjs"
+    "module": "commonjs",
+    "moduleResolution": "node",
   },
   "include": [
     "src/**/*.ts"
