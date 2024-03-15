@@ -11,6 +11,8 @@
     "build": "npm run build-frontend && npm run build-backend",
     "build-backend": "cd backend && npm i && npm run build",
     "build-frontend": "cd frontend && npm i && npm run build",
+    "heroku-prebuild": "npm i -g npm@latest angular-cli@latest",
+    "heroku-postbuild": "npm run build",
     "start": "npm run start-backend",
     "start-backend": "cd backend && npm start",
     "start-frontend": "cd frontend && npm start"
