@@ -1,9 +1,8 @@
 import connectDB from './config/db';
 import router from './config/router';
 import path from 'path';
-import express from 'express';
+import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
-import { Request, Response } from 'express';
 
 connectDB();
 
@@ -12,13 +11,13 @@ dotenv.config();
 const app = express();
 
 app.use('/api', router);
-app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+app.use(express.static(path.join(__dirname, '..', '..', '..', 'frontend', 'dist', 'vertex')));
 
 const secret = process.env['SECRET'] || 'ugly space wizard donkey';
 const port = process.env['PORT'] || 8000;
 
 app.get('*', (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', '..', '..', 'frontend', 'dist', 'vertex', 'browser', 'index.html'));
 });
 
 app.listen(port, () => {

@@ -1,5 +1,6 @@
 {
   "extends": "../tsconfig.json",
+  "type": "module",
   "compilerOptions": {
     "outDir": "./dist/app",
     "types": []

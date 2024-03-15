@@ -2,11 +2,11 @@
   "name": "vertex-frontend",
   "version": "0.0.1",
   "scripts": {
-    "build": "ng build",
+    "build": "ng build --base-href vertex",
     "format": "eslint src/**/*.ts --fix",
     "lint": "eslint src/**/*.ts",
     "start": "ng serve",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --base-href vertex --watch --configuration development"
   },
   "author": "Aaron Holloway",
   "license": "MIT",
