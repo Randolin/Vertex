@@ -6,7 +6,7 @@ const ChartSchema = new Schema({
   privateId: String,
   active: { type: Boolean, default: true },
   createDate: { type: Date, default: Date.now },
-  lastAccessed: { type: Date, default: Date.now },
+  lastLogin: { type: Date, default: Date.now },
   lastUpdated: { type: Date, default: Date.now },
   lastViewed: { type: Date, default: Date.now },
 });

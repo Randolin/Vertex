@@ -12,6 +12,7 @@ dotenv.config();
 connectDB().then(() => {
   const app = express();
 
+  app.use(express.json());
   app.use('/api', router);
   app.use(express.static(path.join(__dirname, '..', '..', 'frontend', 'dist', 'browser')));
 
